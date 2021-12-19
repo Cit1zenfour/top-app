@@ -1,9 +1,10 @@
 import { Button, Htag, P, Rating } from "../components";
 import { Tag } from "../components/Tag/Tag";
+import { withLayout } from "../layout/Layout";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   return (
-    <div>
+    <>
       <Htag tag="h1">Text</Htag>
       <Button appearance="primary" arrow="right">
         Кнопка
@@ -17,6 +18,8 @@ export default function Home(): JSX.Element {
         Большой
       </Tag>
       <Rating rating={4} isEditable />
-    </div>
+    </>
   );
 }
+
+export default withLayout(Home);
